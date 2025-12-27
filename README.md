@@ -5,5 +5,5 @@
   -Loading…
       =Success
 
-# Push yourself to solve exercises on your own. use your Brain and Google only.
+# Push yourself to solve exercises on your own. use your Brain and (Manual) only.
 #Every solved problem unlocks the next level in your mind
