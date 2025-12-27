@@ -14,19 +14,3 @@ int ft_strcmp(char *s1, char *s2)
     }
     return 0;
 }
-int main()
-{
-    char s1[] = "bhmed";
-    char s2[] = "aala";
-
-    int res = ft_strcmp(s1, s2);
-
-    printf("%d\n", res);
-    if(res > 0)
-    {
-        printf("kbir\n");
-    }
-    else{
-        printf("sghir\n");
-    }
-}
