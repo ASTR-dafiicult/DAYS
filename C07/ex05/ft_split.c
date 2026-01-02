@@ -45,12 +45,15 @@ char *malloc_copy(char *str, int length)
 {
     int i = 0;
     char *word = malloc(length + 1);
+    if(!word)
+    {
+        return NULL;
+    }
     while(i < length)
     {
         word[i] = str[i];
         i++;
     }
-    printf("%s\n", word);
     word[i] = '\0';
     return word;
 }
@@ -68,6 +71,17 @@ char **ft_split(char *str, char *charset)
         {
             length = length_every_string(&str[i], charset);
             tab[index] = malloc_copy(&str[i], length);
+            if(!tab[index])
+            {
+                int j = 0;
+                while(size < j)
+                {
+                    free(tab[j]);
+                    j++;
+                }
+                free(tab);
+                return NULL;
+            }
             index++;
             i += length;
         }
@@ -90,4 +104,5 @@ int main()
         i++;
     }
     
+
 }
