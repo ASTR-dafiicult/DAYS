@@ -1,6 +1,6 @@
 # include "ft_str_to_tab.h"
 # include <unistd.h>
-# include <stdio.h>
+
 
 void ft_putchar(char c)
 {
@@ -55,4 +55,5 @@ int main(int ac, char **av)
     struct s_stock_str *alt;
     alt = ft_strs_to_tab(ac, av);
     ft_show_tab(alt);
+
 }
