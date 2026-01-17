@@ -87,8 +87,6 @@ char **ft_split(char *str, char *charset)
         {
             length = length_every_string(&str[i], charset);
             tab[index] = copy_string_to_tab(&str[i], length);
-            //goal of this parte of code cleanup all alocation of tab if !tab[index] was NULL
-            //that problem name memory leak
             if(!tab[index])
             {
                 int j = 0;
@@ -110,9 +108,6 @@ char **ft_split(char *str, char *charset)
     tab[index] = NULL;
     return tab;
 }
-//إلى خرجنا مباشرة بreturn NULL"
-//الميموار لي تخلق قبل غتبقى محجوزة
-//هذا اسمو memory leak
 int main()
 {
     char str[] = ",,hello,this,is,me";
@@ -124,4 +119,5 @@ int main()
         printf("%s\n", res[i]);
         i++;
     }
+
 }
